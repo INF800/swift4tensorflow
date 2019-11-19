@@ -111,7 +111,7 @@ Hello, world!
 2. add "hellolib" (as a String inside array) in 'targets --> .target --> dependencies'
 ```
 
-helloexec/Package:
+helloexec/Package.swift:
 ```
 // swift-tools-version:5.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
@@ -137,6 +137,8 @@ let package = Package(
     ]
 )
 ```
+Note: If loading from github use: `.package(url: /* package url */, from: "1.x.0x),`
+
 - You can write whatever code you want in `Sources/helloexec/main.swift` and run it using `swift build && swift run`. Edit it so that you can access `public struct World` and `func sayHello()`
 
 main.swift:
