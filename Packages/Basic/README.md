@@ -2,5 +2,6 @@
 
 Swift Package Manager (spm) can create two different types of packages
 
-- library package
-- executable package
+- `Library package`: Used for creating general libraries
+- `Executable package`: Used to run/import all libraries locally using `main.swift` file
+ 
