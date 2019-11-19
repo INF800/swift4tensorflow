@@ -42,6 +42,6 @@
 
 Note: github package connection not working. Raise an issue
 
-[How to create a basic package and import it locally]()
+[How to create a basic package and import it locally](https://github.com/rakesh4real/swift4tensorflow/tree/master/Packages/Basic)
 
 ---------------------------------------------------
