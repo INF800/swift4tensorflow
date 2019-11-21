@@ -137,7 +137,8 @@ let package = Package(
     ]
 )
 ```
-Note: If loading from github simply replace with: `.package(url: /* github url */, from: "1.x.0x),`
+
+Note: If loading from github simply replace with: `.package(url: /* github url */, from: "1.x.0x),` It is hosted [here](https://github.com/rakesh4real/hellolib). (Tagged release using website gui in github)
 
 - You can write whatever code you want in `Sources/helloexec/main.swift` and run it using `swift build && swift run`. Edit it so that you can access `public struct World` and `func sayHello()`
 
