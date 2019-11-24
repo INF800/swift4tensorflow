@@ -1,8 +1,8 @@
 public struct Stack<T> {
-  public var array = [T]()
+ fileprivate var array = [T]()
 
-  public mutating func create(_ arr: Array<T>) {                                                                                
-    array = arr
+  public init(elements: Array<T>){
+    self.array = elements
   }
 
   public var isEmpty: Bool {

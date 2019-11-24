@@ -8,5 +8,6 @@
  
 import DataStructures
 
-var mystack = Stack<String>()
-mystack.create(["a", "b"])
+var eles = Array<Int>([1, 2, 3])
+var stack = Stack(elements: eles)
+print(stack.top)
