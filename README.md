@@ -40,8 +40,12 @@
 
 ## Build a Package/Library using SPM
 
-Note: github package connection not working. Raise an issue
+**Outline**
 
-[How to create a basic package and import it locally](https://github.com/rakesh4real/swift4tensorflow/tree/master/Packages/Basic)
+1. Create library package - `hellolib`
+2. Create executable package - `helloexec`
+3. Import and access `hellolib` using `helloexec`
+
+[Know more here](https://github.com/rakesh4real/swift4tensorflow/tree/master/Packages/Basic)
 
 ---------------------------------------------------
