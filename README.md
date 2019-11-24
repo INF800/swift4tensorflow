@@ -46,6 +46,6 @@
 2. Create executable package - `helloexec`
 3. Import and access `hellolib` using `helloexec`
 
-[Know more here](https://github.com/rakesh4real/swift4tensorflow/tree/master/Packages/Basic)
+[Know more here](https://github.com/rakesh4real/swift4tensorflow/tree/master/03-creating-packages/Basic)
 
 ---------------------------------------------------
