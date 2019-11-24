@@ -168,3 +168,5 @@ Hello, World!
 ```
 
 **Note:** You can add different modules(`.swift` files) in `package-name/Sources/package-name/` folder with any name you want. All structs and classes in all those files will be accessible. This will help in writing projects with `modularity`
+
+[Apple docs](https://github.com/apple/swift-package-manager/blob/master/Documentation/Usage.md)
