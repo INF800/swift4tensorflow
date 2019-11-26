@@ -1,13 +1,20 @@
-//print("Hello from app")
-
-//import DataStructures
-//Test.testMe()
-
-// test module 2
-//Test2.testMe2()
- 
 import DataStructures
 
-var eles = Array<Int>([1, 2, 3])
-var stack = Stack(elements: eles)
-print(stack.top)
+var st = Stack(elements: [7, "a"])
+
+print(st.count)
+
+st.show()
+
+st.push("hi")
+st.show()
+
+// Removes optional as well!!
+// `guard` does nothing for this
+
+var poppedElement = st.pop() ?? "stack empty"
+print(poppedElement)
+st.show()
+
+var topElement = st.Top ?? "Stack Empty"
+print(topElement)
