@@ -126,5 +126,9 @@ has noth to do with `a` and `b`
 
 
 
-Note: All operations are same for `Stack<Any>` and `Stack<T>`
+Note: 
+
+a. All operations are same for `Stack<Any>` and `Stack<T>`
+b. Simply use `print( myStack.pop() ?? "Stack is empty" )`
+
 */
