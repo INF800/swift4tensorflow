@@ -2,7 +2,10 @@
 // ------------------------------------------
 // Implemented same as stack in `Stack.swift`
 // but unlike it, this implementation has
-// unoptimal dequeue operation
+// unoptimal dequeue operation.
+// (See `Stack.swift` for detailed explanation
+// of implementation)
+
 
 public struct SimpleQueue<T>{
   public var array = Array<T>()
