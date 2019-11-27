@@ -42,7 +42,7 @@ public struct SimpleQueue<T>{
   }
 
   public var last: T?{
-    return array[array.count]
+    return array.last
   }
 
   public func show(){
@@ -111,7 +111,7 @@ public struct Queue<T>{
   }
 
   public var last: T{
-    return array.last
+    return array[array.count]
   }
 
   public func show(){
@@ -128,7 +128,7 @@ public struct Queue<T>{
   // 1. Return `nil` if `queue` is empty
   // 2. Store dequeued element to return
   // 3. Assign `nil` to current front element and increnment `head`
-  // 4. Trim `nil`s if size of `array` exeeds `max_limit_without_trimming` AND 
+  // 4. Trim `nil`s if size of `array` exceeds `max_limit_without_trimming` AND 
   // `percent_of_nils` in `array` exeeds `max_percent_of_nils`.
   public mutating func dequeue() -> T?{
     
