@@ -105,6 +105,14 @@ public struct Queue<T>{
   public var isEmpty: Bool{
     return count==0
   }
+  
+  public var first: T?{
+    return array.first
+  }
+
+  public var last: T?{
+    return array.last
+  }
 
   public func show(){
     print(array)
