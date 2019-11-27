@@ -42,7 +42,7 @@ public struct SimpleQueue<T>{
   }
 
   public var last: T?{
-    return array[array.count]
+    return array[array.count] // `array.last` instead produce error
   }
 
   public func show(){
@@ -111,7 +111,7 @@ public struct Queue<T>{
   }
 
   public var last: T?{
-    return array[array.count]
+    return array[array.count] // `array.last` instead produce error
   }
 
   public func show(){
