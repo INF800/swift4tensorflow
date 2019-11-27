@@ -110,7 +110,7 @@ public struct Queue<T>{
     return array[head]
   }
 
-  public var last: T{
+  public var last: T?{
     return array[array.count]
   }
 
