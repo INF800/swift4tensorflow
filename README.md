@@ -49,3 +49,9 @@
 [Know more here](/03-creating-packages/Basic)
 
 ---------------------------------------------------
+
+## Data Structures
+
+a. Stack
+b. Simple Queue
+c. Optimal Queue
