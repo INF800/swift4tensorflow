@@ -18,3 +18,7 @@ st.show()
 
 var topElement = st.Top ?? "Stack Empty"
 print(topElement)
+
+print("creating empty stack")
+var empSt = Stack<Any>()
+print("success")

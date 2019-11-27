@@ -12,6 +12,8 @@ public struct Stack<T>{
   public init(elements: Array<T>){
     self.array = elements
   }
+  // For empty stack initialisation
+  public init(){ }
 
   // Top element
   // -----------------------------------------------------
