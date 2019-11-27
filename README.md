@@ -52,10 +52,10 @@
 
 ## Data Structures
 
-a. Stack
+- Stack
+- Queue
+  - Simple
+  - Optimal
 
-b. Simple Queue
-
-c. Optimal Queue
 
 
