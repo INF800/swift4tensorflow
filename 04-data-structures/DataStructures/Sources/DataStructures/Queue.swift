@@ -76,6 +76,10 @@ cash register, but the cash register moves up the queue.
 // Optimal Queue
 
 public struct Queue<T>{
+  
+  // Note:
+  // Array must be of type optional as it stores `nil` aswell
+  // Queue<T> not Queue<T?>
   public var array = Array<T?>()
   var head: Int = 0
 
@@ -87,10 +91,17 @@ public struct Queue<T>{
     // for empty Queue initialisation
   }
 
+  // As head will be increasing and `nil`s will be present in array,
+  // best way to return count is `array.count - head`
   public var count: Int{
     return array.count - head
   }
 
+  // As queue will never be empty because of `nil`s, 
+  // to check if it is empty or not
+  // we have to check if `head == array.count`
+  // Note: `head` can become greater than `array.count`
+  // which can be stopped by using conditional in dequeue operation.
   public var isEmpty: Bool{
     return count==0
   }
@@ -99,25 +110,37 @@ public struct Queue<T>{
     print(array)
   }
 
+   // self-optimized
   public mutating func enqueue(_ element: T){
     array.append(element)
   }
 
+  // Most of optimisatioin happens here
+  // -----------------------------------------------------------
+  // 1. Return `nil` if `queue` is empty
+  // 2. Store dequeued element to return
+  // 3. Assign `nil` to current front element and increnment `head`
+  // 4. Trim `nil`s if size of `array` exeeds `max_limit_without_trimming` AND 
+  // `percent_of_nils` in `array` exeeds `max_percent_of_nils`.
   public mutating func dequeue() -> T?{
     
-    // without `&& head < array.count` no error 
+    // without `&& head < array.count` there is no error 
     guard !isEmpty && head < array.count else{ return nil}
 
-    let dequeuedElement = array[head]
+    let dequeuedElement = array[head] // For returning
     array[head] = nil
     head = head + 1
 
-    let max_limit_without_trimming = 10
+    // change these according to your neeeds
+    let max_limit_without_trimming = 100
+    let max_percent_of_nils = 0.3
+    
+    // As `head`<`array.count`, can calculate number of nils using this:
     let percent_of_nils = Double(head) / Double(array.count)
     
-    if array.count > max_limit_without_trimming && percent_of_nils > 0.3 {
-      array.removeFirst(head)
-      head = 0
+    if array.count > max_limit_without_trimming && percent_of_nils > max_percent_of_nils {
+      array.removeFirst(head) // `removeFirst(x)` trims elements upto index `x` from begining of `array`
+      head = 0 // reinitalize, as array resized
     }
 
     return dequeuedElement
