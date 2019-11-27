@@ -113,7 +113,9 @@ public struct Queue<T>{
   }
 
   public var last: T?{
-    return array[array.count] // `array.last` instead produce error
+    // `array.last` instead produce error
+    // Note: `-1` otherwise array out of range errpr
+    return array[array.count - 1] 
   }
 
   public func show(){
@@ -162,5 +164,28 @@ public struct Queue<T>{
 Examples
 -------------------------------------------------------------------------------------------------
 
+1. Initialisation
+------------------
+var empty_int_qeue = Queue<Int>()
+var empty_qeue_with_any_data_type = Queue<Any>()
+var myQ = Queue(elements: [1, 3, 4, "r", 5])
+
+2. Commons
+-------------
+print(myQ.count)
+print(myQ.isEmpty)
+print(myQ.first ?? "stack is empty")
+print(myQ.last ?? "stack is empty")
+myQ.show()
+
+3. Dequeue
+-----------
+myQ.dequeue()
+myQ.show()
+
+4. Enqueue
+-----------
+myQ.enqueue("8")
+myQ.show()
 
 */
