@@ -53,5 +53,9 @@
 ## Data Structures
 
 a. Stack
+
 b. Simple Queue
+
 c. Optimal Queue
+
+
