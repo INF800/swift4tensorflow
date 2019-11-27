@@ -123,7 +123,7 @@ public struct Queue<T>{
     array.append(element)
   }
 
-  // Most of optimisatioin happens here
+  // Most of optimizatoin happens here
   // -----------------------------------------------------------
   // 1. Return `nil` if `queue` is empty
   // 2. Store dequeued element to return
