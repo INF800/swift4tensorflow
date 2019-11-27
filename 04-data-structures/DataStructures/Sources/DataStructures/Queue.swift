@@ -42,7 +42,9 @@ public struct SimpleQueue<T>{
   }
 
   public var last: T?{
-    return array[array.count] // `array.last` instead produce error
+    // `array.last` instead produce error
+    // Note: `-1` otherwise array out of range errpr
+    return array[array.count - 1] 
   }
 
   public func show(){
