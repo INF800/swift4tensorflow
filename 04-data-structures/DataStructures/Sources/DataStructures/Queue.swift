@@ -13,15 +13,19 @@ public struct SimpleQueue<T>{
   public init(elements: Array<T>){
     array = elements
   }
+  
+  public init(){ } 
 
   public var isEmpty: Bool{
     return array.isEmpty
   }
 
+  // optimal: O(1) amortized (once in a while O(n))
   public mutating func enqueue(_ element: T){
     array.append(element)
   }
 
+  // Unoptimal: O(n)
   public mutating func dequeue() -> T?{
     guard !isEmpty else{
       return nil
@@ -45,7 +49,28 @@ public struct SimpleQueue<T>{
     print(array)
   }
 }
+/*
+Note:
 
+The above queue will work completely fine but has unoptimal dequeue operation.
+-------------------------------------------------------------------------------
+
+[Enqueue:] It is optimal with amortized time complexity O(1) i.e once in a while,
+it becomes O(n) but on average it is O(1).
+There is already empty space present at rearer end of an `array`. So, while enquing, we are just 
+copying element(s). Copy operation has time complexity O(1). 
+But, when there is no empty space available at rearer end, extra space is allocated to the 
+`array` which has geater time complexity O(n).
+
+[Dequeue:] It is unoptimal in above case because, there is no space present at front end of `array`.
+Whenever wee deque an element, all elements have to be `shifted` to left which has time complexity
+of O(n)
+
+[Solution:]To solve this, add empty space in front of `array` and trim it ocassionally.
+It is like if in a supermarket the people in the checkout lane do not shuffle forward towards the 
+cash register, but the cash register moves up the queue.
+
+*/
 // ---------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------
 
