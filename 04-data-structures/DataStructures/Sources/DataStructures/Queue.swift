@@ -107,7 +107,7 @@ public struct Queue<T>{
   }
   
   public var first: T?{
-    return array.first
+    return array[head]
   }
 
   public var last: T?{
