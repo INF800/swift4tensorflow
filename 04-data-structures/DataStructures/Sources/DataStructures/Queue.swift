@@ -41,7 +41,7 @@ public struct SimpleQueue<T>{
     return array.first
   }
 
-  public var last: T{
+  public var last: T?{
     return array.last
   }
 
