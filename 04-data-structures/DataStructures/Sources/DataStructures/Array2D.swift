@@ -53,7 +53,7 @@ public struct Array2D<T>{
         precondition(row<rows, "Row index \(row) out of Range: 0 to \(rows-1)")
         precondition(col<cols, "Column index \(col) out of Range: 0 to \(cols-1)")
 
-        array_2d[col][row] = newValue
+        array_2d[col][row] = newValue // note: `newValue`
     }
   }
   
