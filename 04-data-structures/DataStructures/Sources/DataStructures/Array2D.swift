@@ -1,4 +1,10 @@
 public struct Array2D<T>{
+  
+  //There are three different ways to initailize an
+  // empty 2-D matrix
+  // var array_2d : [[Int]] = []
+  // var array_2d = [[Int]]()
+  // var array_2d = Array<[Int]>() 
   fileprivate var array_2d = Array<[T]>()
   public let COLS: Int 
   public let ROWS: Int
