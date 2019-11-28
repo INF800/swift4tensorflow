@@ -45,7 +45,7 @@
 1. Create library package - `hellolib`
 2. Create executable package - `helloexec`
 3. Import and access `hellolib` using `helloexec`
-4. **Todo: Import in [swift-jupyter notebooks](https://colab.research.google.com/github/tensorflow/swift/blob/master/notebooks/blank_swift.ipynb)**
+4. Import in [swift-jupyter notebooks](https://colab.research.google.com/github/tensorflow/swift/blob/master/notebooks/blank_swift.ipynb)**
 
 [Know more here](/03-creating-packages/Basic)
 
