@@ -1,24 +1,12 @@
 import DataStructures
 
-var st = Stack(elements: [7, "a"])
+var arr2d = Array2D<Int>(rows: 3, cols: 4, initial_value_for_all: 0)
 
-print(st.count)
+arr2d.show()
 
-st.show()
+arr2d[3, 1] = 9
+print(arr2d[3, 1])
+arr2d.show()
 
-st.push("hi")
-st.show()
-
-// Removes optional as well!!
-// `guard` does nothing for this
-
-var poppedElement = st.pop() ?? "stack empty"
-print(poppedElement)
-st.show()
-
-var topElement = st.Top ?? "Stack Empty"
-print(topElement)
-
-print("creating empty stack")
-var empSt = Stack<Any>()
-print("success")
+//todo
+//print(arr2d[2])
