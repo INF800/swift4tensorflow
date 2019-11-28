@@ -42,6 +42,7 @@ public struct Array2D<T>{
       }
       array_2d.append(row)
     }    
+    show() //display after initialisation
   }
   /*
   ----------------------------------------------------------------------------
@@ -68,6 +69,7 @@ public struct Array2D<T>{
   // Display
   // Todo: Format the display
   public func show(){
+    print("\n2D Array looks like this:\n")
     for i in 0..<ROWS{
         for j in 0..<COLS{
           print(array_2d[i][j], terminator: "\t")              
