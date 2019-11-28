@@ -176,7 +176,9 @@ Hello, World!
 ### Importing a SPM Package in Swift-Jupyter Notebook
 
 - Restart Runtime
+
 - In first cell use the command :
+
         ```
         %install-location $cwd/swift-install
         %install '.package(url: "https://github.com/rakesh4real/swift-datastructures", from:"0.0.1")' DataStructures
