@@ -53,9 +53,11 @@
 
 ## Data Structures
 
--Array
+- Array
   - 2-Dimensional
+  
 - Stack
+
 - Queue
   - Simple
   - Optimal
