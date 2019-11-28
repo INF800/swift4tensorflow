@@ -170,3 +170,16 @@ Hello, World!
 **Note:** You can add different modules(`.swift` files) in `package-name/Sources/package-name/` folder with any name you want. All structs and classes in all those files will be accessible. This will help in writing projects with `modularity`
 
 [Apple docs](https://github.com/apple/swift-package-manager/blob/master/Documentation/Usage.md)
+
+------
+
+### Importing a SPM Package in Swift-Jupyter Notebook
+
+- Restart Runtime
+- In first cell use the command :
+        ```
+        %install-location $cwd/swift-install
+        %install '.package(url: "https://github.com/rakesh4real/swift-datastructures", from:"0.0.1")' DataStructures
+        ```
+
+*Note: `DataStructures` here is our package name. It is case sensitive. You can find out your package name in `Package.swiift`*
