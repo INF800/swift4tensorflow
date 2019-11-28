@@ -55,9 +55,7 @@
 
 - Array
   - 2-Dimensional
-  
 - Stack
-
 - Queue
   - Simple
   - Optimal
