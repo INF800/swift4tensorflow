@@ -184,4 +184,4 @@ Hello, World!
         %install '.package(url: "https://github.com/rakesh4real/swift-datastructures", from:"0.0.1")' DataStructures
         ```
 
-*Note: `DataStructures` here is our package name. It is case sensitive. You can find out your package name in `Package.swiift`*
+**Note:** *`DataStructures` here is our package name. It is case sensitive. You can find out your package name in `Package.swift`*
