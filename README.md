@@ -53,6 +53,8 @@
 
 ## Data Structures
 
+-Array
+  - 2-Dimensional
 - Stack
 - Queue
   - Simple
