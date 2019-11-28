@@ -42,6 +42,7 @@ public struct Array2D<T>{
     return COLS
   }
 
+ // returnable of type `T`, and editable as well  
   public subscript(_ row: Int, _ col: Int) -> T{
     get {
         precondition(row<rows, "Row index \(row) out of Range: 0 to \(rows-1)")
