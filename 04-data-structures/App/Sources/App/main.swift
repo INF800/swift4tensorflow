@@ -1,3 +1,3 @@
 import DataStructures
 
-ArrayND.printme()
+print(nd_arr)
