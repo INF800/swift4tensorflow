@@ -129,7 +129,7 @@ public struct Array2D<T>{
 var arr2d = Array2D<Int>(rows: 3, cols: 4, initial_value_for_all: 0)
 
 // if user already knows elements
-// Note: It should be a rectangel / square matrix
+// Note: It should be a rectangle / square matrix
 var arr2 = Array2D<String>(
     [
         ["a", "b", "c"],
