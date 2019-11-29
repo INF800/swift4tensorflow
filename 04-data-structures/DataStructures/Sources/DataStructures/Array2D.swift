@@ -19,7 +19,7 @@ public struct Array2D<T>{
   fileprivate var array_2d = Array<[T]>()
   public let COLS: Int 
   public let ROWS: Int
-  public let INITIAL_VALUE_FOR_ALL: T
+  public var INITIAL_VALUE_FOR_ALL: T 
 
   // We cannnot simply make an empty 2-D array. Some values must
   // be stored in each element. `INITIAL_VALUE_FOR_ALL` takes care 
@@ -41,8 +41,22 @@ public struct Array2D<T>{
         row.append(INITIAL_VALUE_FOR_ALL)
       }
       array_2d.append(row)
-    }    
+    }
+
     show() //display after initialisation
+    
+  }
+
+  // Constructor overloading for initalizing if user
+  // already know elements
+  // Note: It shoud be a Rectange or Square matrix
+  public init(_ array: [[T]]){
+    array_2d = array
+    COLS = array_2d[0].count
+    ROWS = array_2d.count
+    INITIAL_VALUE_FOR_ALL = array_2d[0][0] //dummy
+
+    show() // after init
   }
   /*
   ----------------------------------------------------------------------------
@@ -101,10 +115,6 @@ public struct Array2D<T>{
         array_2d[col][row] = newValue // note: `newValue`
     }
   }
-
-  // Todo: Initialize `Array2D` directly from user as in 
-  // Array2D = [[1,2], [2,3]]
-  // Actually, it is simple. Just use constructor to initialize `array_2d` directly
   
 }
 
@@ -117,6 +127,17 @@ public struct Array2D<T>{
 1. Initialize
 --------------
 var arr2d = Array2D<Int>(rows: 3, cols: 4, initial_value_for_all: 0)
+
+// if user already knows elements
+// Note: It should be a rectangel / square matrix
+var arr2 = Array2D<String>(
+    [
+        ["a", "b", "c"],
+        ["d", "e", "f"]
+    ]
+)
+print(arr2.cols) // 3
+print(arr2.rows) // 2
 
 2. Display (single digit elemeents preferred)
 ----------------------------------------------
