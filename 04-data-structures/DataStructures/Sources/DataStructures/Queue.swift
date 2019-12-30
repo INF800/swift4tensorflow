@@ -9,6 +9,7 @@
 
 public struct SimpleQueue<T>{
   public var array = Array<T>()
+    
 
   public init(elements: Array<T>){
     array = elements
@@ -82,8 +83,8 @@ public struct Queue<T>{
   // Note:
   // Array must be of type optional as it stores `nil` aswell
   // Queue<T> not Queue<T?>
-  public var array = Array<T?>()
-  var head: Int = 0
+  fileprivate var array = Array<T?>()
+  fileprivate var head: Int = 0
 
   public init(elements: Array<T>){
     array = elements
@@ -109,10 +110,12 @@ public struct Queue<T>{
   }
   
   public var first: T?{
+    guard !isEmpty && head<array.count else {return nil}
     return array[head]
   }
 
   public var last: T?{
+    guard !isEmpty && head<array.count else {return nil}
     // `array.last` instead produce error
     // Note: `-1` otherwise array out of range errpr
     return array[array.count - 1] 
@@ -174,7 +177,7 @@ var myQ = Queue(elements: [1, 3, 4, "r", 5])
 -------------
 print(myQ.count)
 print(myQ.isEmpty)
-print(myQ.first ?? "stack is empty")
+print(myQ.first ?? "stack is empty") // (or)
 print(myQ.last ?? "stack is empty")
 myQ.show()
 
