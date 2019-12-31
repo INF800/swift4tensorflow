@@ -55,9 +55,11 @@
 
 - Array
   - 2-Dimensional
-  - Bit Set
 - Stack
 - Queue
+  - Simple
+  - Optimal
+- Deque
   - Simple
   - Optimal
 
